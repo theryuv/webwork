@@ -1,0 +1,315 @@
+/*
+* @Author: OMEN
+* @Date:   2020-12-15 14:19:48
+* @Last Modified by:   OMEN
+* @Last Modified time: 2020-12-19 10:02:42
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+.firstpaper{
+	height: 1520px;
+	width: 1200px;
+	background-color:#cb99c5;
+    position:absolute;
+	top:0%;
+	left:10%;
+	z-index: 2;
+}
+.register{
+	height: 300px;
+	width: 600px;
+	position:absolute;
+    top:20%;
+    left:50%;
+    margin-left:-150px;
+    margin-top:-250px; 
+}
+.username{
+	width:500px;
+	height: 20px;
+	padding:10px;
+	margin:10px;
+}
+.tip{
+	margin-left:5px;
+	font-size:3px;
+	color:grey;
+}
+.low{
+	float: left;
+	margin-left:40px;
+	margin-top: 10px;
+	padding:10px;
+	width:200px;
+	color:black;
+}
+.tiplow{
+	color:grey;
+	height:50px;
+}
+.secondpaper{
+	height: 1200px;
+	width: 1200px;
+	background-color:white;
+    position:absolute;
+    top:0%;
+    left:10%;
+    z-index: 1;
+}
+.banner{
+	width: 600px;
+	height: 300px;
+	position: absolute;
+	float: left;
+	margin-left: 300px;
+	overflow: hidden;
+}
+#list{
+	width: 3600px;
+	height: 300px;
+	position: absolute;
+	z-index: 1;
+}
+#list img{
+	width: 600px;
+	height: 300px;
+	float: left;
+}
+.arrow{
+	position: absolute;
+	top:110px;
+	text-decoration: none;
+	z-index: 2;
+	display: none;
+	width: 40px;
+	height: 40px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 39px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(0,0,0,1);
+	cursor: pointer;
+}
+.arrow:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+#counter:hover .arrow{
+	display: block;
+}
+#next{
+	right:20px;
+}
+#list{
+	transition: left 1s;
+}
+.list{
+	transition: left 0.1s;
+}
+#buttons{
+	position: absolute;
+	height: 10px;
+	width: 120px;
+	left:250px;
+	bottom:20px;
+	z-index: 2;
+}
+#buttons span{
+	border: 1px solid #FFFFFF;
+	border-radius:5px ;
+	float: left;
+	width:10px;
+	height: 10px;
+	background-color: #333;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#buttons .on{
+	background: orangered;
+}
+.header{
+	height: 250px;
+	width: 1200px;
+	overflow: hidden;
+	position: relative;
+	background: url('image/3.jpg') no-repeat center center;
+	margin: 0 auto;
+}
+.wordtop{
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	font-size: 15px;
+	color: white;
+}
+.form {
+	float: left;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+.form * {
+    float: left;
+}
+.form .search {
+    width: 147px;
+    height: 11px;
+    border: 1px solid rgba(2, 122, 200, 1);
+    padding: 9px;
+}
+
+.form .submit {
+    width: 31px;
+    height: 31px;
+    border: 1px solid rgba(2, 188, 200, 1);
+    background: rgba(20, 168, 200, 1) url('image/search.png') no-repeat center center;
+    cursor: pointer;
+}
+
+:focus {
+    outline: none;
+}
+.logo{
+	float: left;
+	height: 120px;
+	width: 150px;
+	margin-left: 70px;
+}
+.content{
+	width: 1200px;
+	height: 130px;
+	margin: 0 auto;
+	background: rgb(250, 250, 250);
+}
+.nav {
+    margin-top: 50px;
+    margin-left: 100px;
+    float: left;
+}
+
+.nav li {
+    float: left;
+    padding: 0 44px;
+    border-right: 2px solid rgba(0, 0, 0, 1);
+}
+
+li.first {
+    padding-left: 20px;
+}
+
+li.last {
+    border: none;
+    padding-right: 20px;
+}
+
+.nav a {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.product{
+	width: 1200px;
+	height: 550px;
+	float: left;
+	margin-top: 320px;
+	background:#4A708B;
+}
+.product-right {
+    width: 700px;
+}
+.product-left{
+	margin-left: 20px;
+}
+.product-item {
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.product-right.fl .product-item {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: #9FB6CD;
+    opacity: 0.8;
+    font-weight: bold;
+    color: white;
+}
+
+.product-info h3 {
+	text-align: center;
+    font-size: 14px;
+    padding: 7px 0;
+}
+
+.product-left .product-item {
+    margin-left: 0;
+}
+
+.product-left .product-info {
+    height: 58px;
+    font-size: 16px;
+}
+
+.product-left h3 {
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.product-left p {
+    font-size: 14px;
+}
+.footer {
+    height: 250px;
+    width: 1200px;
+	float: left;
+    background: rgba(58, 58, 58, 1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer h4 {
+    padding: 38px 0 23px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer ul {
+    display: inline-block;
+}
+
+.footer li {
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    padding: 0 12px;
+    border-right: 2px solid rgba(255, 255, 255, 1);
+}
+
+.footer li.last {
+    border: none;
+}
+
+.footer p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 65px;
+}

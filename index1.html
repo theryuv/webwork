@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css.css" />
+	<link rel="stylesheet" href="normalize.css" />
+</head>
+<body>
+	<div class="page">
+		<div class="firstpaper">
+			<div class="register">
+				<div class="username">
+					<p>
+						<a>用户名&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<input onfocus="focusFirst();" onblur="loseFirst();" type="text" >
+					</p>
+				</div>
+				<p class="tip"></p>
+				<div class="username">
+					<p>
+						<a>设置密码</a>
+						<input onfocus="focusSecond();" onblur="loseSecond();" type="text" >
+					</p>
+				</div>
+				<p class="tip"></p>
+				<input class="low" onclick="success();" type="button" value="立即注册">
+			</div>
+		</div>
+		<div class="secondpaper">
+			<div class="header clear">
+				<div class="wordtop">
+					<p class="tipword"></p>
+					<p class="tipword1"></p>
+				</div>
+				<form class="form clear">
+            		<input type="text" placeholder="搜索" class="search" />
+            		<input type="button" class="submit" />
+        		</form>
+			</div>
+			<div class="content clear">
+        		<img src="image/logo1.png" alt="logo图" class="logo" />
+        		<ul class="nav clear">
+            		<li class="first"><a href="#">推荐</a></li>
+            		<li><a href="#">热门</a></li>
+            		<li><a href="#">新品</a></li>
+            		<li><a href="#">分区</a></li>
+            		<li class="last"><a href="#">历史</a></li>
+       			</ul>
+    		</div>
+			<div class="banner">
+				<div id="list"style="left:0px;">
+					<img src="image/1.jpg" alt="1">
+					<img src="image/2.jpg" alt="2">
+					<img src="image/3.jpg" alt="3">
+					<img src="image/4.jpg" alt="4">
+					<img src="image/5.jpg" alt="5">
+					<img src="image/6.jpg" alt="6">
+				</div>
+				<a href="javascript:;" id="next" class="arrow">&gt;</a>
+			</div>
+			<div class="product">
+				<ul class="product-left fl clear">
+            		<li class="product-item">
+                	<img src="image/7.jpg" alt="" width="450" height="500" />
+                	<div class="product-info">
+                    	<h3></h3>
+                	</div>
+            		</li>
+        		</ul>
+        		<ul class="product-right fr clear">
+            		<li class="product-item">
+                	<img src="image/8.jpeg" alt="" width="340" height="240" />
+                	<div class="product-info">
+                    	<h3>凡是过往，皆为序章</h3>
+                	</div>
+            	</li>
+            	<li class="product-item">
+                	<img src="image/9.jpeg" alt="" width="340" height="240" />
+                	<div class="product-info">
+                    	<h3>橘子晴朗，玻璃辉煌</h3>
+                	</div>
+            	</li>
+            	<li class="product-item">
+                	<img src="image/10.jpeg" alt="" width="340" height="240" />
+                	<div class="product-info">
+                    	<h3>长夜无眠，为海祈梦</h3>
+                	</div>
+           		</li>
+            	<li class="product-item">
+                	<img src="image/11.jpeg" alt="" width="340" height="240" />
+                	<div class="product-info">
+                    	<h3>银河无望，舟起河想</h3>
+                	</div>
+            	</li>
+        	</ul>
+		</div>
+		<div class="footer">
+			<h4>关于我们</h4>
+        	<ul class="clear">
+            	<li>关于</li>
+            	<li>帮助</li>
+            	<li>客服</li>
+            	<li class="last">疑问</li>
+        	</ul>
+        	<p>© 2020 zzf
+        	版权所有，并保留所有权利。</p>
+    	</div>
+	</div>
+	<script type="text/javascript">
+		var counter=document.getElementsByClassName("banner")[0];
+		var next=document.getElementById("next");
+		var word1=document.getElementsByClassName("tipword")[0];
+		var word2=document.getElementsByClassName("tipword1")[0];
+		var list=document.getElementById("list");
+		var timer;
+		var username=document.getElementsByTagName("input")[0];
+		var password=document.getElementsByTagName("input")[1];
+		var p1=document.getElementsByTagName("p")[1];
+		var p2=document.getElementsByTagName("p")[3];
+		function focusFirst(){
+    			p1.innerHTML="支持中文字体";
+    		}
+    	function loseFirst(){
+    		if (username.value=="") {
+    			p1.innerHTML="用户名不能为空";
+    		}
+    		else{
+    			p1.innerHTML="&nbsp;"
+    		}
+    	}
+    	function focusSecond(){
+    			p2.innerHTML="建议使用两种字符组合";
+    		}
+    	function loseSecond(){
+    		if (password.value=="") {
+    			p2.innerHTML="密码不能为空";
+    		}
+    		else{
+    			p1.innerHTML="&nbsp;"
+    		}
+    	}
+    	function success(){
+    		alert("注册成功！ 用户名："+username.value+"密码："+password.value);
+    		document.getElementsByClassName('firstpaper')[0].style.zIndex=0;
+    		word1.innerHTML=username.value
+    		word2.innerHTML="您好！"
+    		var nextlist=parseInt(list.style.left);
+			function animals(offset){
+			var newlist=parseInt(list.style.left)+offset;
+			list.style.left=newlist+'px';
+			if(newlist<-3001){
+				list.style.left=0+'px';
+				list.setAttribute('class','list');
+			}
+			if(newlist>0){
+				list.style.left=-3000+'px';
+				list.setAttribute('class','list');
+			}
+		}
+		next.onclick=function(){
+			animals(-600)
+		}
+		function start(){
+			timer=setInterval(function(){
+				next.onclick()
+			},2000);
+		}
+		start();
+		function stop(){
+			clearInterval(timer);
+		}
+		counter.onmouseleave=start;
+		counter.onmouseenter=stop;
+	}
+	</script>
+</body>
+</html>

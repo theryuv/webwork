@@ -1,0 +1,25 @@
+/*
+* @Author: OMEN
+* @Date:   2020-06-08 10:28:21
+* @Last Modified by:   OMEN
+* @Last Modified time: 2020-06-12 09:32:50
+*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
